@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Click</title>
+</head>
+<body>
+    <div class="one_click">
+        <h1>Have you made your click?</h1>
+        <form>
+            <input type="text" id="number" value="0"/>
+            <br>
+            <input id="number_button" type="button" onclick="incrementValue()" value="Increment Value" />
+        </form>
+    </div>
+
+    <script>
+        function incrementValue()
+        {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+        }
+    </script>
+
+    <style>
+        .one_click {
+            position: fixed; /* or absolute */
+            top: 50%;
+            left: 47%;
+        }
+
+        #number {
+            border: none;
+            font-weight: bold;
+            font-size: x-large;
+        }
+
+        #number_button {
+            position: fixed;
+            top: 55%;
+            left: 44.5%;
+        }
+    </style>
+</body>
+</html>
